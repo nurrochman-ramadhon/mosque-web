@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { IoMdClose } from "react-icons/io";
-export const Sidebar = ({isOpenSidebar,onHandlerCloseSideBar}) => {
-
-    return <div
+import { mainMenu } from "../../../public/data/main-menu";
+export const Sidebar = ({ isOpenSidebar, onHandlerCloseSideBar }) => {
+  const data = mainMenu;
+  return (
+    <div
       className={`fixed inset-0 bg-gray-800 bg-opacity-50 ${
         isOpenSidebar ? "visible" : "invisible"
-      }`} onClick={onHandlerCloseSideBar}
+      }`}
+      onClick={onHandlerCloseSideBar}
     >
       <div
         className={`absolute top-0 px-4 w-[200px] h-full bg-white shadow transition-all duration-300 ease-in-out ${
@@ -18,52 +21,17 @@ export const Sidebar = ({isOpenSidebar,onHandlerCloseSideBar}) => {
           onClick={onHandlerCloseSideBar}
         />
         <ul className="mt-12">
-          <li className="py-4">
-            <Link
-              href="/"
-              onClick={onHandlerCloseSideBar}
-              className="text-gray-600 hover:text-black"
-            >
-              Home
-            </Link>
-          </li>
-          <li className="py-4">
-            <Link
-              href="/shop"
-              onClick={onHandlerCloseSideBar}
-              className="text-gray-600 hover:text-black"
-            >
-              Agenda
-            </Link>
-          </li>
-          <li className="py-4">
-            <Link
-              href="/blog"
-              onClick={onHandlerCloseSideBar}
-              className="text-gray-600 hover:text-black"
-            >
-              Galeri
-            </Link>
-          </li>
-          <li className="py-4">
-            <Link
-              href="/contact"
-              onClick={onHandlerCloseSideBar}
-              className="text-gray-600 hover:text-black"
-            >
-              Materi Kajian
-            </Link>
-          </li>
-          <li className="py-4">
-            <Link
-              href="/contact"
-              onClick={onHandlerCloseSideBar}
-              className="text-gray-600 hover:text-black"
-            >
-              Kontak
-            </Link>
-          </li>
+          {data.map(({title, path}) => {
+            return (
+              <li key={title}>
+                <Link href={path} className="text-gray-600 hover:text-black" onClick={()=>{}}>
+                  {title}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
-}
+  );
+};
