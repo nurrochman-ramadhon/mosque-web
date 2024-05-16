@@ -7,7 +7,10 @@ import Navbar from "@/components/shared/Navbar";
 const poppins = Poppins({ subsets: ["latin"],weight:["300","400","500","600","700"] });
 
 export const metadata = {
-  title: "Beranda Masjid Darussalam",
+  icons:{
+    icon:"/icon.png"
+  },
+  title: "Masjid Darussalam",
   description: "Selamat Datang di Beranda Masjid Darussalam",
 };
 
