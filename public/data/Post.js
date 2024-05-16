@@ -4,6 +4,7 @@ import img3 from "../portrait-quran 1.jpg"
 import img4 from "../portrait-quran 2.jpg"
 import img5 from "../portrait-shalah 1.jpg"
 import img6 from "../portrait-shalah 2.jpg"
+import img7 from "../banner-hajj.jpg"
 const Posts = [
     {
         id: 1,
@@ -46,6 +47,13 @@ const Posts = [
         date : "7 Mei 2024",
         media:img6,
         isFeatured:false
+    },
+    {
+        id: 7,
+        title : "Ibadah Haji Teladan dari Nabi Ibrahim",
+        date : "8 Mei 2024",
+        media:img7,
+        isFeatured:true
     },
 ]
 export default Posts
