@@ -4,7 +4,7 @@ import Image from "next/image";
 export const CarouselCardBanner = ({ data }) => {
   const { title, id, date, media } = data;
   return (
-    <div className={`relative flex min-w-full h-[400px]`} key={id}>
+    <div className={`relative flex min-w-full h-[400px] `} key={id}>
       <Image src={media} alt={title} className=" object-cover" />
       <div className="absolute bottom-0 bg-white opacity-70 p-4 text-sm min-w-full">
         <div className="flex flex-col justify-end gap-1 truncate ">

@@ -1,4 +1,5 @@
-export const servicesOption = [
+
+export const ServicesOption = [
     {
         id:1,
         icon:"",
@@ -16,14 +17,21 @@ export const servicesOption = [
     {
         id:3,
         icon:"",
-        title:"Buletin Rohai",
+        title:"Buletin Rohani",
         shortDesc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         isFeatured : true
     },
     {
-        id:3,
+        id:4,
         icon:"",
         title:"Pelayanan Zakat",
+        shortDesc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        isFeatured : true
+    },
+    {
+        id:5,
+        icon:"",
+        title:"Reservasi Gedung",
         shortDesc : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         isFeatured : true
     },

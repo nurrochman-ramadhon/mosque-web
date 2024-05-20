@@ -27,7 +27,7 @@ export const Carousel = () => {
   return (
     <div className="relative flex">
       <CarouselArrow next={next} prev={prev} />
-      <div className="relative overflow-hidden ">
+      <div className="relative overflow-hidden">
         <div
           className="flex h-fit transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${activeSlide * 100}%)` }}

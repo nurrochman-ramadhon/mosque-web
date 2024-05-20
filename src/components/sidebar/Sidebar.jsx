@@ -20,7 +20,7 @@ export const Sidebar = ({ isOpenSidebar, onHandlerCloseSideBar }) => {
           className="absolute top-4 right-4 text-gray-600 hover:text-black cursor-pointer"
           onClick={onHandlerCloseSideBar}
         />
-        <ul className="mt-12">
+        <ul className="mt-12 flex flex-col gap-4">
           {data.map(({title, path}) => {
             return (
               <li key={title}>

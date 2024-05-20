@@ -16,6 +16,10 @@ export const mainMenu = [
         path:"/",
     },
     {
+        title:"Layanan Zakat",
+        path:"/",
+    },
+    {
         title:"Kontak",
         path:"/",
     },
