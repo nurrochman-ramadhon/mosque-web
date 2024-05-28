@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-gradient-to-r from-blue-700 via-blue-900 to-blue-700  w-full flex justify-between items-center px-4 py-2 z-[99999] fixed text-white ${
+      className={`bg-gradient-to-r from-blue-700 via-blue-900 to-blue-700 w-full flex justify-between items-center px-4 py-2 z-[99999] fixed text-white ${
         isScrolled
           ? " top-0 left-0 w-full shadow-md px-4 h-16 bg-opacity-90"
           : ""

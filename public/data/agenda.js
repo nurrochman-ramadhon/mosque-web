@@ -1,0 +1,51 @@
+export const Agenda = [
+    {
+        id:1,
+        startHour:"08.00",
+        endHour:"11.00",
+        title:"Kajian Fiqh Bersama Ustadz",
+        date:"05/01/2024",
+        media:"",
+    },
+    {
+        id:2,
+        startHour:"19.00",
+        endHour:"21.00",
+        title:"Tadarus Rutin",
+        date:"05/03/2024",
+        media:"",
+    },
+    {
+        id:3,
+        startHour:"16.00",
+        endHour:"18.00",
+        title:"Training Da'i Cilik",
+        date:"05/05/2024",
+        media:"",
+    },
+    {
+        id:4,
+        startHour:"08.00",
+        endHour:"11.00",
+        title:"Kajian Fiqh Bersama Ustadz",
+        date:"05/07/2024",
+        media:"",
+    },
+    {
+        id:5,
+        startHour:"19.00",
+        endHour:"21.00",
+        title:"Tadarus Rutin",
+        date:"05/09/2024",
+        media:"",
+    },
+    {
+        id:6,
+        startHour:"16.00",
+        endHour:"18.00",
+        title:"Training Da'i Cilik",
+        date:"05/11/2024",
+        media:"",
+    },
+   
+]

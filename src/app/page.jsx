@@ -5,7 +5,7 @@ import { SectionThree } from "@/components/home-page/section-3";
 
 export default function Home() {
   return (
-    <div>
+    <div className=" scroll-smooth">
       <SectionOne/>
       <SectionTwo/>
       <SectionThree/>

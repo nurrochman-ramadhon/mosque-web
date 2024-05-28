@@ -18,11 +18,9 @@ export const Carousel = () => {
   }, []);
   const prev = () => {
     setActiveSlide((curr) => (curr === 0 ? bannerData.length - 1 : curr - 1));
-    console.log({ activeSlide });
   };
   const next = () => {
     setActiveSlide((curr) => (curr === bannerData.length - 1 ? 0 : curr + 1));
-    console.log({ activeSlide });
   };
   return (
     <div className="relative flex">
