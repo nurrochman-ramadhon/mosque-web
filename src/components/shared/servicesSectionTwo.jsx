@@ -16,7 +16,7 @@ export const Services = () => {
   //   }
   // };
   return (
-    <div className="services-section flex flex-wrap justify-evenly gap-y-9">
+    <div className="services-section flex flex-wrap justify-evenly gap-y-9 md:w-[700px] lg:w-[950px] md:mx-auto">
       {servicesData.map((val) => {
         return <ServicesCard title={val.title} key={val.title} />;
       })}

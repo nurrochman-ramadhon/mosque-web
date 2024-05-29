@@ -18,7 +18,7 @@ export const Artikel = () => {
 
   return (
     <div className="relative md:w-3/4">
-      <SubtitleComponent title={"Artikel"}/>
+      <SubtitleComponent title={"Artikel"} align={true}/>
       {getMainArtikel(data)}
       <SubArtikel items={data} />
     </div>

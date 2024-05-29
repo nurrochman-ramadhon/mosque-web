@@ -4,7 +4,7 @@ import { FaXTwitter, FaInstagram  } from "react-icons/fa6";
 import { IoMailOutline } from "react-icons/io5";
 
 export const Footer = () => {
-    return <div className="shadow">
+    return <div className="shadow mt-8">
         <div className="flex">
             <div className="w-full flex flex-col items-center justify-center text-sm">
                 <div className="flex items-center gap-1 font-bold">
