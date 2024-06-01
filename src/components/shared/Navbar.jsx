@@ -6,11 +6,13 @@ import { useRouter } from "next/navigation";
 import { FaMosque } from "react-icons/fa";
 import Link from "next/link";
 import { Sidebar } from "../sidebar/Sidebar";
+import { mainMenu } from "../../../public/data/main-menu";
 
 const Navbar = () => {
   const [isOpenSidebar, setIsOpenSideBar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
+  const menu = mainMenu
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +43,7 @@ const Navbar = () => {
           : ""
       }`}
     >
-      <div>
+      <div className="md:hidden">
         <GiHamburgerMenu
           className="hover:text-blue-300 cursor-pointer"
           onClick={() => setIsOpenSideBar(true)}
@@ -54,8 +56,11 @@ const Navbar = () => {
         </span>
         <span className="text-xl font-bold">Masjid Darussalam</span>
       </div>
-      <div className="flex items-center cursor-pointer hover:text-blue-300 ">
-        <FaUser className="" />
+      <div className="flex items-center  ">
+        <FaUser className="md:hidden cursor-pointer hover:text-blue-300"/>
+        <div className="hidden items-center gap-3 md:flex">
+          {menu.map((val)=>{if(val.title!=="Home") {return <p key={val.title} className="cursor-pointer hover:text-blue-300 text-sm">{val.title}</p>}})}
+        </div>
       </div>
       <Sidebar isOpenSidebar={isOpenSidebar} onHandlerCloseSideBar={onHandlerCloseSideBar}/>
     </nav>

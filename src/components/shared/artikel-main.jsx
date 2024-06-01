@@ -3,7 +3,7 @@ import Image from "next/image"
 export const MainArtikel = ({item}) => {
     const {date, media, title }= item
     return <div className="p-3 flex flex-col gap-y-2 cursor-pointer hover:opacity-70">
-        <div className=" relative flex h-[200px]">
+        <div className=" relative flex h-[200px] md:h-[350px]">
             <Image src={media} alt={title} className=" object-cover object-bottom"/>
         </div>
         <div className="font-semibold text-xl">

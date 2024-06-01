@@ -8,10 +8,6 @@ export const mainMenu = [
         path:"/",
     },
     {
-        title:"Galeri",
-        path:"/",
-    },
-    {
         title:"Materi Kajian",
         path:"/",
     },
@@ -20,7 +16,15 @@ export const mainMenu = [
         path:"/",
     },
     {
+        title:"Galeri",
+        path:"/",
+    },
+    {
         title:"Kontak",
+        path:"/",
+    },
+    {
+        title:"Akun",
         path:"/",
     },
 ]

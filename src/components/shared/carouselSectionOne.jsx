@@ -27,7 +27,7 @@ export const Carousel = () => {
       <CarouselArrow next={next} prev={prev} />
       <div className="relative overflow-hidden">
         <div
-          className="flex h-fit transition-transform ease-out duration-500"
+          className="flex h-[400px] md:h-[470px] lg:h-[520px] transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${activeSlide * 100}%)` }}
         >
           {bannerData.map((val, idx) => {

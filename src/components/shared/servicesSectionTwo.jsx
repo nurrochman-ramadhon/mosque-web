@@ -1,25 +1,25 @@
+"use client";
+import { useEffect, useRef } from "react";
 import { ServicesOption } from "../../../public/data/servicesOption";
 import { ServicesCard } from "./servicesCard";
+import { motion, useInView, useScroll } from "framer-motion";
+
 export const Services = () => {
   const servicesData = ServicesOption;
-  
-  // const reveal = () => {
-  //   window.addEventListener("scroll", reveal);
-  //   let reveals = document.querySelector(".services-section");
-  //   let windowHeight = window.innerHeight;
-  //   let revealTop = reveals.getBoundingClientRect().top;
-  //   let revealPoint = 150;
-  //   if (revealTop < windowHeight - revealPoint) {
-  //     reveals.classList.add("active");
-  //   } else {
-  //     reveals.classList.remove("active");
-  //   }
-  // };
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  // useEffect(() => {console.log(isInView);}, [isInView]);
   return (
-    <div className="services-section flex flex-wrap justify-evenly gap-y-9 md:w-[700px] lg:w-[950px] md:mx-auto">
+    <motion.div
+      ref={ref}
+      initial={{opacity: 0, y: 75}}
+      whileInView={{opacity: 1, y: 0, transition:{duration: 0.5, delay: 0.25}}}
+      viewport={{ margin:"-250px", once:true}}
+      className="services-section flex flex-wrap justify-evenly gap-y-9 md:w-[700px] lg:w-[950px] md:mx-auto"
+    >
       {servicesData.map((val) => {
         return <ServicesCard title={val.title} key={val.title} />;
       })}
-    </div>
+    </motion.div>
   );
 };
